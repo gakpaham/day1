@@ -1,0 +1,294 @@
+{
+  "target_definition": "Exploratory only: log(close[t+1] / close[t]); features are available at the close of bar t.",
+  "inference_caveat": "Mann-Whitney, Kruskal-Wallis, Pearson and Spearman p-values assume independent observations; serial dependence makes them descriptive.",
+  "dataset_profile": {
+    "BTCUSDT": {
+      "shape": [
+        1206229,
+        15
+      ],
+      "memory_bytes": 153191215,
+      "missing_percent": 0.0,
+      "duplicate_rows": 0,
+      "zero_variance_columns": [
+        "symbol"
+      ],
+      "first_timestamp_utc": "2019-09-08T17:57:00+00:00",
+      "last_timestamp_utc": "2026-07-26T17:21:00+00:00",
+      "return_summary": {
+        "n": 1206228,
+        "mean": 1.5481217751703933e-06,
+        "std": 0.0015637147078640253,
+        "skew": -1.1197753305617,
+        "excess_kurtosis": 178.25106356226047,
+        "q01": -0.004196430486804527,
+        "median": 0.0,
+        "q99": 0.004230490477705361
+      },
+      "seasonality": {
+        "hour_kruskal_h": 3582.8273903788204,
+        "hour_p_value": "<1e-300",
+        "hour_epsilon_squared": 0.05904703075867205,
+        "highest_median_hour_utc": 14,
+        "highest_median_daily_abs_return": 0.0010339556189003754,
+        "lowest_median_hour_utc": 5,
+        "lowest_median_daily_abs_return": 0.0005630930368585474,
+        "weekday_kruskal_h": 269.6377259734518,
+        "weekday_p_value": 2.59313708456571e-55,
+        "weekday_epsilon_squared": 0.10516064059571271,
+        "daily_abs_return_median_by_weekday": {
+          "0": 0.0008415109844205227,
+          "1": 0.0008512425694551084,
+          "2": 0.0008629615461420864,
+          "3": 0.0008552800357105366,
+          "4": 0.0008469147973300001,
+          "5": 0.0005459836975550036,
+          "6": 0.0006311403573269249
+        }
+      }
+    },
+    "ETHUSDT": {
+      "shape": [
+        1168035,
+        15
+      ],
+      "memory_bytes": 148340577,
+      "missing_percent": 0.0,
+      "duplicate_rows": 0,
+      "zero_variance_columns": [
+        "symbol"
+      ],
+      "first_timestamp_utc": "2019-11-27T07:45:00+00:00",
+      "last_timestamp_utc": "2026-07-26T17:27:00+00:00",
+      "return_summary": {
+        "n": 1168034,
+        "mean": 2.2029399939933696e-06,
+        "std": 0.0020313156197770852,
+        "skew": -1.4333915143251261,
+        "excess_kurtosis": 249.14308066672177,
+        "q01": -0.005468822112709189,
+        "median": 0.0,
+        "q99": 0.005519587016875918
+      },
+      "seasonality": {
+        "hour_kruskal_h": 3159.3210395203864,
+        "hour_p_value": "<1e-300",
+        "hour_epsilon_squared": 0.05372344575138982,
+        "highest_median_hour_utc": 14,
+        "highest_median_daily_abs_return": 0.0013241400867500704,
+        "lowest_median_hour_utc": 5,
+        "lowest_median_daily_abs_return": 0.0007799814207525072,
+        "weekday_kruskal_h": 176.74625503593415,
+        "weekday_p_value": 1.665239310382255e-35,
+        "weekday_epsilon_squared": 0.07035280388790036,
+        "daily_abs_return_median_by_weekday": {
+          "0": 0.0010969970874995436,
+          "1": 0.0011147553164398158,
+          "2": 0.0011513617227440133,
+          "3": 0.0011310788658494384,
+          "4": 0.0011161173056405246,
+          "5": 0.0008093339361763158,
+          "6": 0.0008437952562937626
+        }
+      }
+    }
+  },
+  "btc_vs_eth_return_distribution": {
+    "mann_whitney_u": 703739048981.5,
+    "p_value": 0.17349562091192616,
+    "rank_biserial_effect": -0.001020088129450758
+  },
+  "mutual_information_nats": {
+    "BTCUSDT": {
+      "current_log_return": 0.05989999187540551,
+      "range_log": 0.13272861440310013,
+      "log_volume": 0.07416478897074885,
+      "log_trades": 0.06325638224386765,
+      "buy_ratio": 0.0031989765012774285,
+      "flow_imbalance": 0.0031886590409593296
+    },
+    "ETHUSDT": {
+      "current_log_return": 0.053351677521096263,
+      "range_log": 0.12554462510594888,
+      "log_volume": 0.06626282747865542,
+      "log_trades": 0.05179891717097895,
+      "buy_ratio": 0.01044852482769354,
+      "flow_imbalance": 0.01044852482769354
+    }
+  },
+  "feature_associations": {
+    "BTCUSDT": {
+      "current_log_return": {
+        "pearson_r": -0.020005915143371557,
+        "pearson_p_value": 1.522529501926834e-08,
+        "spearman_rho": -0.0424049148449173,
+        "spearman_p_value": 3.590476231683891e-33,
+        "mutual_information_nats": 0.05989999187540551,
+        "sample_size": 80000
+      },
+      "range_log": {
+        "pearson_r": -0.018572521104632252,
+        "pearson_p_value": 1.4925736737711236e-07,
+        "spearman_rho": -0.005045326083308549,
+        "spearman_p_value": 0.15357398617736787,
+        "mutual_information_nats": 0.13272861440310013,
+        "sample_size": 80000
+      },
+      "log_volume": {
+        "pearson_r": -0.004695509679571411,
+        "pearson_p_value": 0.18415258389860256,
+        "spearman_rho": -0.001789630260829854,
+        "spearman_p_value": 0.6127328395048599,
+        "mutual_information_nats": 0.07416478897074885,
+        "sample_size": 80000
+      },
+      "log_trades": {
+        "pearson_r": -0.0058743506157152925,
+        "pearson_p_value": 0.0966119381874396,
+        "spearman_rho": -0.003438933039999039,
+        "spearman_p_value": 0.3307199119966551,
+        "mutual_information_nats": 0.06325638224386765,
+        "sample_size": 80000
+      },
+      "buy_ratio": {
+        "pearson_r": -0.012566149106211892,
+        "pearson_p_value": 0.00037894559109481903,
+        "spearman_rho": -0.035278186674705975,
+        "spearman_p_value": 1.8435749132073707e-23,
+        "mutual_information_nats": 0.0031989765012774285,
+        "sample_size": 80000
+      },
+      "flow_imbalance": {
+        "pearson_r": -0.012566149106211892,
+        "pearson_p_value": 0.00037894559109481903,
+        "spearman_rho": -0.03527818690812569,
+        "spearman_p_value": 1.8435736852685748e-23,
+        "mutual_information_nats": 0.0031886590409593296,
+        "sample_size": 80000
+      }
+    },
+    "ETHUSDT": {
+      "current_log_return": {
+        "pearson_r": -0.037571069972006856,
+        "pearson_p_value": 2.1544095836889116e-26,
+        "spearman_rho": -0.039104553441451334,
+        "spearman_p_value": 1.8650651197774222e-28,
+        "mutual_information_nats": 0.053351677521096263,
+        "sample_size": 80000
+      },
+      "range_log": {
+        "pearson_r": 0.03468578034933638,
+        "pearson_p_value": 9.857039142544649e-23,
+        "spearman_rho": 0.0008916569647713186,
+        "spearman_p_value": 0.8008905095658679,
+        "mutual_information_nats": 0.12554462510594888,
+        "sample_size": 80000
+      },
+      "log_volume": {
+        "pearson_r": 0.0034636237360106377,
+        "pearson_p_value": 0.3272597231005179,
+        "spearman_rho": -0.0018737808071810854,
+        "spearman_p_value": 0.5961275793236354,
+        "mutual_information_nats": 0.06626282747865542,
+        "sample_size": 80000
+      },
+      "log_trades": {
+        "pearson_r": -0.0015634786904058695,
+        "pearson_p_value": 0.6583358653601357,
+        "spearman_rho": -0.003168666850993475,
+        "spearman_p_value": 0.3701339021109079,
+        "mutual_information_nats": 0.05179891717097895,
+        "sample_size": 80000
+      },
+      "buy_ratio": {
+        "pearson_r": -0.009330496814999372,
+        "pearson_p_value": 0.008313154911561578,
+        "spearman_rho": -0.02777625761695681,
+        "spearman_p_value": 3.912346627669527e-15,
+        "mutual_information_nats": 0.01044852482769354,
+        "sample_size": 80000
+      },
+      "flow_imbalance": {
+        "pearson_r": -0.00933049681499937,
+        "pearson_p_value": 0.008313154911561578,
+        "spearman_rho": -0.02777625761695681,
+        "spearman_p_value": 3.912346627669527e-15,
+        "mutual_information_nats": 0.01044852482769354,
+        "sample_size": 80000
+      }
+    }
+  },
+  "cross_asset_returns": {
+    "aligned_n": 1168032,
+    "pearson_r": 0.8245268601441458,
+    "pearson_p_value": "<1e-300",
+    "spearman_rho": 0.8134138004027937,
+    "spearman_p_value": "<1e-300",
+    "btc_t_to_eth_t_plus_1_r": -0.015190340259155964,
+    "btc_t_to_eth_t_plus_1_p_value": 1.4226262357224928e-60,
+    "eth_t_to_btc_t_plus_1_r": -0.013049337548383737,
+    "eth_t_to_btc_t_plus_1_p_value": 3.6026722613408746e-45
+  },
+  "vif": {
+    "BTCUSDT": {
+      "all_features": {
+        "current_log_return": 1.280469284080275,
+        "range_log": 1.696453919438086,
+        "log_volume": 2.993727931899668,
+        "log_trades": 2.25854675336223,
+        "buy_ratio": 1000799917193443.5,
+        "flow_imbalance": 1000799917193443.5
+      },
+      "without_flow_imbalance": {
+        "current_log_return": 1.2804692840802752,
+        "range_log": 1.696453919438086,
+        "log_volume": 2.993727931899668,
+        "log_trades": 2.2585467533622303,
+        "buy_ratio": 1.2749891950201642
+      }
+    },
+    "ETHUSDT": {
+      "all_features": {
+        "current_log_return": 1.2447625519611893,
+        "range_log": 1.5672475740310081,
+        "log_volume": 3.787676716059707,
+        "log_trades": 2.9287952378351254,
+        "buy_ratio": 1000799917193443.5,
+        "flow_imbalance": 1000799917193443.5
+      },
+      "without_flow_imbalance": {
+        "current_log_return": 1.2447625519611893,
+        "range_log": 1.5672475740310081,
+        "log_volume": 3.787676716059707,
+        "log_trades": 2.9287952378351254,
+        "buy_ratio": 1.2453676031694807
+      }
+    }
+  },
+  "robust_anomalies": {
+    "BTCUSDT:bar_return": {
+      "threshold": 6,
+      "count": 16414,
+      "share": 0.0136077093219524,
+      "n": 1206228
+    },
+    "BTCUSDT:log_volume": {
+      "threshold": 6,
+      "count": 0,
+      "share": 0.0,
+      "n": 1206229
+    },
+    "ETHUSDT:bar_return": {
+      "threshold": 6,
+      "count": 14727,
+      "share": 0.012608365852363886,
+      "n": 1168034
+    },
+    "ETHUSDT:log_volume": {
+      "threshold": 6,
+      "count": 136,
+      "share": 0.00011643486710586583,
+      "n": 1168035
+    }
+  }
+}

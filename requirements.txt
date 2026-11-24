@@ -1,0 +1,17 @@
+numpy
+pandas
+pyarrow
+scipy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+plotly
+lightgbm
+catboost
+optuna
+shap
+joblib
+nbformat
+nbconvert
+ipykernel
